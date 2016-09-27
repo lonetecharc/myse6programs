@@ -1,0 +1,19 @@
+{
+  "name": "myse6programs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonetecharc/myse6programs.git"
+  },
+  "author": "lonetecharc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lonetecharc/myse6programs/issues"
+  },
+  "homepage": "https://github.com/lonetecharc/myse6programs#readme"
+}
