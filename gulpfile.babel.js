@@ -14,6 +14,12 @@ gulp.task('default', cb => {
     run('server','build','watch',cb);
 });
 
+gulp.task('copy', () => {
+    return gulp
+        .src('./src/**/*.html')
+        .pipe(gulp.dest(paths.destination));
+});
+
 gulp.task('clean', cb => {
     rimraf(paths.destination,cb);
 });
@@ -26,10 +32,14 @@ gulp.task('babel',shell.task([
     'babel src --out-dir app'
 ]));
 
+gulp.task('babel-routes',shell.task([
+    'babel src/routes --out-dir app/routes'
+]));
+
 
 
 gulp.task('build', cb => {
-    run('clean','flow', 'babel', 'restart', cb);
+    run('clean','flow', 'babel', 'babel-routes' ,'copy' ,'restart', cb);
 });
 
 gulp.task('watch',() => {
